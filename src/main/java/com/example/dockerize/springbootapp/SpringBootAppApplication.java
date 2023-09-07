@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-@RequestMapping("/api/hello")
+@RequestMapping("/hi")
 public class SpringBootAppApplication {
 
 	public static void main(String[] args) {
@@ -17,6 +17,6 @@ public class SpringBootAppApplication {
 
 	@GetMapping()
 	public String getGreeting(){
-		return "Hello spring boot application with jeckins jjjjj **************  ";
+		return "Hello this is our spring boot application using by CIDI";
 	}
 }
