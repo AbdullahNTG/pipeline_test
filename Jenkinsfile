@@ -8,7 +8,11 @@ pipeline {
       }
     }
         withMaven(){
-          sh 'mvn install --batch-mode -DskipTests verify org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar -Dsonar.projectKey= myproject -Dsonar.host.url=http://192.168.56.122:9001
+          sh 'mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=mypro \
+  -Dsonar.projectName='mypro' \
+  -Dsonar.host.url=http://192.168.56.122:9001 \
+  -Dsonar.token=sqp_4b62ca8ebd0a196ca5c693f6684f0c5da5858f7b'
     stage('Build') {
       steps {
         sh 'mvn clean install'
