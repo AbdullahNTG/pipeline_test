@@ -14,7 +14,7 @@ pipeline {
     }
     stage('deploy') {
       steps {
-        sh 'scp /var/jenkins_home/workspace/pipeline/target/spring-boot-docker.jar oc@192.168.50.17:/home/oc/oc/crc-linux-2.24.1-amd64/Docker'
+        sh 'scp /var/jenkins_home/workspace/pipeline/target/spring-boot-docker.jar oc@192.168.56.101:/home/oc/oc/crc-linux-2.24.1-amd64/Docker'
       }
     }
 
