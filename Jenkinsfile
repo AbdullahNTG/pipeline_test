@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Clone') {
       steps {
-        git branch: 'main', url: 'https://github.com/H-test0/java.git'
+        git branch: 'main', url: 'https://github.com/AbdullahNTG/pipeline_test.git'
       }
     }
     stage('Test & Build') {
@@ -14,7 +14,7 @@ pipeline {
     }
     stage('deploy') {
       steps {
-        sh 'scp /var/jenkins_home/workspace/pipeline/target/spring-boot-docker.jar oc@192.168.56.101:/home/oc/oc/crc-linux-2.24.1-amd64/Docker'
+      		sh 'scp /var/jenkins_home/workspace/pipeline/target/spring-boot-docker.jar user01:@192.168.56.101:/home/user01/pipeline_test'
       }
     }
 
